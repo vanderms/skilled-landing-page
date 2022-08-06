@@ -1,3 +1,131 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: inherit;
+  font-weight: 500;
+  color: inherit;
+  text-decoration: none;
+  font-style: normal;
+}
 
+ul,
+ol {
+  list-style-type: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  max-width: 96%;
+  margin-inline: auto;
+}
+@media screen and (min-width: 22rem) {
+  .container {
+    max-width: max(21.4375rem, 91.4667%);
+  }
+}
+@media screen and (min-width: 45rem) {
+  .container {
+    max-width: min(48rem, 89.5833%);
+  }
+}
+@media screen and (min-width: 74rem) {
+  .container {
+    max-width: 69.375rem;
+  }
+}
+
+.bg-neutral {
+  background: #FFF;
+}
+.bg-neutral-500 {
+  background: #83869A;
+}
+.bg-neutral-800 {
+  background: #13183F;
+}
+.bg-neutral-600 {
+  background: #666CA3;
+}
+.bg-secondary {
+  background: #F74780;
+}
+.bg-primary-gradient {
+  background: linear-gradient(180deg, #FF6F48 0.04%, #F02AA6 100%);
+}
+.bg-secondary-gradient {
+  background: linear-gradient(180deg, #4851FF 0%, #F02AA6 99.92%);
+}
+
+.text-neutral {
+  color: #FFF;
+}
+.text-neutral-500 {
+  color: #83869A;
+}
+.text-neutral-800 {
+  color: #13183F;
+}
+.text-neutral-600 {
+  color: #666CA3;
+}
+.text-secondary {
+  color: #F74780;
+}
+
+.headline-xl {
+  font-weight: 800;
+  font-size: 2.5rem;
+  line-height: 3.125rem;
+}
+@media screen and (min-width: 74rem) {
+  .headline-xl {
+    font-size: 3.5rem;
+    line-height: 4.4375rem;
+  }
+}
+
+.headline-md {
+  font-weight: 800;
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+@media screen and (min-width: 74rem) {
+  .headline-md {
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
+}
+
+.headline-sm {
+  font-weight: 800;
+  font-size: 1.25rem;
+  line-height: 1.5625rem;
+}
+@media screen and (min-width: 74rem) {
+  .headline-sm {
+    font-size: 1.5rem;
+    line-height: 1.875rem;
+  }
+}
+
+.body-md {
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.625rem;
+}
+@media screen and (min-width: 74rem) {
+  .body-md {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+}
 
 /*# sourceMappingURL=index.css.map */
