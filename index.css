@@ -128,4 +128,43 @@ img {
   }
 }
 
+.btn {
+  max-width: 100%;
+  padding: 0.5625rem 0 0.6875rem;
+  display: grid;
+  place-items: center;
+  font-size: 1rem;
+  line-height: 1.75rem;
+  font-weight: 700;
+  border-radius: 999px;
+  color: #FFF;
+}
+@media screen and (min-width: 74rem) {
+  .btn {
+    padding: 0.875rem 0;
+  }
+}
+
+.navbar-btn {
+  width: 8.75rem;
+  background-color: #13183F;
+}
+.navbar-btn:hover {
+  background-color: #666CA3;
+}
+
+.navbar {
+  margin-top: 1rem;
+}
+@media screen and (min-width: 45rem) {
+  .navbar {
+    margin-top: 1.5rem;
+  }
+}
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 /*# sourceMappingURL=index.css.map */

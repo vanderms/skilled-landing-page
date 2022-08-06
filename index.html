@@ -11,20 +11,62 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;700;800&display=swap"
     rel="stylesheet">
-
+  <link rel="stylesheet" href="index.css">
   <title>Frontend Mentor | Skilled e-learning landing page</title>
 </head>
 
 <body>
 
-  Get Started
+  <nav class="navbar">
+    <div class="container">
+      <a href="/" aria-label="Homepage">
+        <img src="/assets/logo-dark.svg" alt="">
+      </a>
+      <a href="" class="btn navbar-btn">
+        Get Started
+      </a>
+    </div>
+  </nav>
 
-  Maximize skill, minimize budget
+  <main>
+    <header class="header-section">
+      <div class="container">
+        <div class="content">
+          <h1 class="title">Maximize skill, minimize budget</h1>
+          <p class="description">Our modern courses across a range of in-demand skills
+            will give you the
+            knowledge you need to live the life you want.
+          </p>
+          <div>
+            <a href="/" class="btn primary-btn">Get Started</a>
+          </div>
+        </div>
+        <picture class="picture">
+          <source media="(min-width: 74rem)" srcset="/assets/image-hero-desktop.webp"
+            type="image/webp">
+          <source media="(min-width: 74rem)"
+            srcset="/assets/image-hero-desktop.png 1x, /assets/image-hero-desktop@2x.png">
 
-  Our modern courses across a range of in-demand skills will give you the
-  knowledge you need to live the life you want.
+          <source media="(min-width: 45rem)" srcset="/assets/image-hero-tablet.webp"
+            type="image/webp">
+          <source media="(min-width: 45rem)"
+            srcset="/assets/image-hero-tablet.png 1x, /assets/image-hero-tablet@2x.png">
 
-  Get Started
+          <source srcset="/assets/image-hero-mobile.webp" type="image/webp">
+          <img src="/assets/image-hero-mobile.png" alt=""
+            srcset="/assets/image-hero-mobile.png 1x, /assets/image-hero-mobile@2x.png">
+        </picture>
+      </div>
+    </header>
+
+  </main>
+
+
+
+
+
+
+
 
   Check out our most popular courses!
 

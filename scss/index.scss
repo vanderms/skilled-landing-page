@@ -150,3 +150,47 @@ $gradients: (
     line-height: 1.75rem;
   }
 }
+
+.btn {
+  max-width: 100%;
+  padding: 0.5625rem 0 0.6875rem;
+  display: grid;
+  place-items: center;
+  font-size: 1rem;
+  line-height: 1.75rem;
+  font-weight: 700;
+  border-radius: 999px;
+  color: map.get($colors, neutral);
+
+  @include media(xl) {
+    padding: 0.875rem 0;
+  }
+}
+
+.navbar-btn {
+  width: 8.75rem;
+  background-color: map.get($colors, neutral-800);
+
+  &:hover {
+    background-color: map.get($colors, neutral-600);
+  }
+}
+
+.navbar {
+  margin-top: 1rem;
+
+  @include media(md){
+    margin-top: 1.5rem;
+  }
+
+  
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+
+
+
+}
