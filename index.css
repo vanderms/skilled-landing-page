@@ -285,6 +285,7 @@ img {
   .features-section .container {
     grid-template-columns: repeat(2, min(100%, 21.4375rem));
     gap: 3.5rem 0.625rem;
+    justify-content: space-between;
   }
 }
 @media screen and (min-width: 74rem) {
