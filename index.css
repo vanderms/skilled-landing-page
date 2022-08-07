@@ -290,7 +290,7 @@ img {
 }
 @media screen and (min-width: 74rem) {
   .features-section .container {
-    grid-template-columns: repeat(3, min(100%, 21.4375rem));
+    grid-template-columns: repeat(3, 1fr);
     gap: 5rem 1.875rem;
   }
 }
