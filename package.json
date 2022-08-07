@@ -4,12 +4,16 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "dev": "concurrently \"npm run server\" \"npm run sass\"",
+    "server": "live-server --port=3000",
     "sass": "sass --watch scss:"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "concurrently": "^7.3.0",
+    "live-server": "^1.2.2",
     "sass": "^1.54.3"
   }
 }

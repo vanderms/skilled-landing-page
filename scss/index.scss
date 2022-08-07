@@ -20,6 +20,7 @@ ol {
   list-style-type: none;
 }
 
+
 img {
   max-width: 100%;
   height: auto;
@@ -37,6 +38,11 @@ $breakpoints: (
   @media screen and (min-width: $breakpoint) {
     @content;
   }
+}
+
+.outer-container {
+  width: 100%;
+  overflow: hidden;
 }
 
 .container {
@@ -153,11 +159,11 @@ $gradients: (
 
 .btn {
   max-width: 100%;
-  padding: 0.5625rem 0 0.6875rem;
+  padding: 1rem 0;
   display: grid;
   place-items: center;
   font-size: 1rem;
-  line-height: 1.75rem;
+  line-height: 1rem;
   font-weight: 700;
   border-radius: 999px;
   color: map.get($colors, neutral);
@@ -167,9 +173,22 @@ $gradients: (
   }
 }
 
+
+.primary-btn {
+  background: map.get($gradients, primary-gradient);
+
+  &.btn {
+    padding: 1.25rem 0;
+  }
+}
+
 .navbar-btn {
   width: 8.75rem;
   background-color: map.get($colors, neutral-800);
+
+  @include media(xl) {
+    width: 10.4375rem;
+  }
 
   &:hover {
     background-color: map.get($colors, neutral-600);
@@ -179,18 +198,48 @@ $gradients: (
 .navbar {
   margin-top: 1rem;
 
-  @include media(md){
+  @include media(md) {
     margin-top: 1.5rem;
   }
 
-  
   .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
+}
 
+.header-section {
+  margin-top: 2.375rem;
 
+  @include media(md) {
+    margin-top: 6.1875rem;
+  }
 
+  .container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.875rem;
 
+    @include media(md) {
+      grid-template-columns: 24.875rem 1fr;
+    }
+  }
+
+  .body-md {
+    margin-top: 1.625rem;
+  }
+
+  .btn {
+    margin-top: 1.5rem;
+    width: 10.4375rem;
+  }
+
+  .picture {
+    @include media(md) {
+      width: 263.3745%;
+      transform: translate(-5rem, -16.4375rem);
+    }
+
+  }
 }

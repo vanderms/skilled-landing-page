@@ -22,6 +22,11 @@ img {
   height: auto;
 }
 
+.outer-container {
+  width: 100%;
+  overflow: hidden;
+}
+
 .container {
   max-width: 96%;
   margin-inline: auto;
@@ -130,11 +135,11 @@ img {
 
 .btn {
   max-width: 100%;
-  padding: 0.5625rem 0 0.6875rem;
+  padding: 1rem 0;
   display: grid;
   place-items: center;
   font-size: 1rem;
-  line-height: 1.75rem;
+  line-height: 1rem;
   font-weight: 700;
   border-radius: 999px;
   color: #FFF;
@@ -145,9 +150,21 @@ img {
   }
 }
 
+.primary-btn {
+  background: linear-gradient(180deg, #FF6F48 0.04%, #F02AA6 100%);
+}
+.primary-btn.btn {
+  padding: 1.25rem 0;
+}
+
 .navbar-btn {
   width: 8.75rem;
   background-color: #13183F;
+}
+@media screen and (min-width: 74rem) {
+  .navbar-btn {
+    width: 10.4375rem;
+  }
 }
 .navbar-btn:hover {
   background-color: #666CA3;
@@ -165,6 +182,38 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.header-section {
+  margin-top: 2.375rem;
+}
+@media screen and (min-width: 45rem) {
+  .header-section {
+    margin-top: 6.1875rem;
+  }
+}
+.header-section .container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.875rem;
+}
+@media screen and (min-width: 45rem) {
+  .header-section .container {
+    grid-template-columns: 24.875rem 1fr;
+  }
+}
+.header-section .body-md {
+  margin-top: 1.625rem;
+}
+.header-section .btn {
+  margin-top: 1.5rem;
+  width: 10.4375rem;
+}
+@media screen and (min-width: 45rem) {
+  .header-section .picture {
+    width: 263.3745%;
+    transform: translate(-5rem, -16.4375rem);
+  }
 }
 
 /*# sourceMappingURL=index.css.map */
