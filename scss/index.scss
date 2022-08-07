@@ -1,6 +1,10 @@
 @use 'sass:math';
 @use 'sass:map';
 
+html {
+  font-size: 16px;
+}
+
 *,
 *::after,
 *::before {
@@ -13,13 +17,13 @@
   color: inherit;
   text-decoration: none;
   font-style: normal;
+  line-height: 100%;
 }
 
 ul,
 ol {
   list-style-type: none;
 }
-
 
 img {
   max-width: 100%;
@@ -38,11 +42,6 @@ $breakpoints: (
   @media screen and (min-width: $breakpoint) {
     @content;
   }
-}
-
-.outer-container {
-  width: 100%;
-  overflow: hidden;
 }
 
 .container {
@@ -163,13 +162,13 @@ $gradients: (
   display: grid;
   place-items: center;
   font-size: 1rem;
-  line-height: 1rem;
   font-weight: 700;
   border-radius: 999px;
   color: map.get($colors, neutral);
 
   @include media(xl) {
-    padding: 0.875rem 0;
+    font-size: 1.125rem;
+    padding: 1.1875rem;
   }
 }
 
@@ -197,6 +196,8 @@ $gradients: (
 
 .navbar {
   margin-top: 1rem;
+  position: relative;
+  z-index: 99;
 
   @include media(md) {
     margin-top: 1.5rem;
@@ -210,10 +211,19 @@ $gradients: (
 }
 
 .header-section {
-  margin-top: 2.375rem;
+  margin-top: -4rem;
+  padding-top: 6.375rem;
+  overflow: hidden;
+
 
   @include media(md) {
-    margin-top: 6.1875rem;
+    margin-top: -4.5rem;
+    padding-top: 10.6875rem;
+  }
+
+  @include media(xl) {
+    margin-top: -5rem;
+    padding-top: 15.75rem;
   }
 
   .container {
@@ -223,6 +233,11 @@ $gradients: (
 
     @include media(md) {
       grid-template-columns: 24.875rem 1fr;
+    }
+
+    @include media(xl) {
+      grid-template-columns: 28.5625rem 1fr;
+      gap: 10.125rem;
     }
   }
 
@@ -239,6 +254,11 @@ $gradients: (
     @include media(md) {
       width: 263.3745%;
       transform: translate(-5rem, -16.4375rem);
+    }
+
+    @include media(xl) {
+      width: 201.833%;
+      transform: translate(-1.5rem, -24.875rem);
     }
 
   }
