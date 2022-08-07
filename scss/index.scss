@@ -346,6 +346,7 @@ $gradients: (
 
   .body-md {
     margin-top: 1rem;
+    flex-grow: 1;
 
     @include media(xl) {
       margin-top: 1.5rem;
