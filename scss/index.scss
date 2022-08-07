@@ -176,6 +176,10 @@ $gradients: (
 .primary-btn {
   background: map.get($gradients, primary-gradient);
 
+  &:hover {
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), linear-gradient(180deg, #FF6F48 0%, #F02AA6 100%);
+  }
+
   &.btn {
     padding: 1.25rem 0;
   }
@@ -219,6 +223,7 @@ $gradients: (
   @include media(md) {
     margin-top: -4.5rem;
     padding-top: 10.6875rem;
+    padding-bottom: 6.25rem;
   }
 
   @include media(xl) {
@@ -252,14 +257,130 @@ $gradients: (
 
   .picture {
     @include media(md) {
-      width: 263.3745%;
-      transform: translate(-5rem, -16.4375rem);
+      transform: translate(-3.25rem, -16.4375rem) scale(2.622951);
+      transform-origin: top left;
     }
 
     @include media(xl) {
-      width: 201.833%;
-      transform: translate(-1.5rem, -24.875rem);
+      transform: translate(-3.25rem, -24.875rem) scale(2.01833);
+    }
+  }
+}
+
+.features-section {
+
+  background: linear-gradient(180deg, #FFFFFF 0%, #F0F1FF 100%);
+  padding-bottom: 5rem;
+
+  @include media(xl) {
+    padding-bottom: 8.75rem;
+  }
+
+  @include media(md) {
+    margin-top: 5.375rem;
+  }
+
+  @include media(xl) {
+    margin-top: 4.25rem;
+  }
+
+
+  .header {
+    padding: 1.5rem 1.75rem 2rem;
+    border-radius: 10px;
+
+    @include media(md) {
+      padding: 3.5rem 2rem;
     }
 
+    @include media(xl) {
+      padding-top: 4rem;
+    }
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: min(100%, 21.4375rem);
+    justify-content: center;
+    row-gap: 2.5rem;
+
+    @include media(md) {
+      grid-template-columns: repeat(2, min(100%, 21.4375rem));
+      gap: 3.5rem 0.625rem;
+    }
+
+    @include media(xl) {
+      grid-template-columns: repeat(3, min(100%, 21.4375rem));
+      gap: 5rem 1.875rem;
+    }
+  }
+}
+
+.feature-card {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 25px 50px rgba(6, 22, 141, 0.0442381);
+  border-radius: 10px;
+  padding: 0 1.75rem 2rem;
+  background-color: white;
+
+
+  @include media(xl) {
+    padding: 0 2rem 2.5rem;
+  }
+
+  .headline-sm {
+
+    @include media(xl) {
+      margin-top: 0.5rem;
+    }
+  }
+
+  .icon {
+    width: 3.5rem;
+    height: 3.5rem;
+    transform: translateY(-1.5rem);
+  }
+
+
+  .body-md {
+    margin-top: 1rem;
+
+    @include media(xl) {
+      margin-top: 1.5rem;
+    }
+  }
+
+  .ternary-btn {
+    margin-top: 1.5rem;
+    font-weight: 700;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    color: map.get($colors, secondary);
+
+    &:hover {
+      color: #FFA7C3;
+    }
+  }
+}
+
+.footer {
+  .container {
+    padding: 2rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .btn {
+    width: 8.75rem;
+
+    &:hover {
+      background: linear-gradient(0deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), linear-gradient(180deg, #4851FF -54.32%, #F02AA6 100%);
+    }
+
+    @include media(xl) {
+      width: 10.4375rem;
+    }
   }
 }
